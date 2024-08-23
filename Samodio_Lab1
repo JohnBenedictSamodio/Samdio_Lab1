@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+        
+
+        Scanner scanner = new Scanner(System.in); // using scanner to enable the user input a character 
+
+        System.out.print("Enter a number: "); // Let the user enter a number
+        int n = scanner.nextInt();
+
+        for(int i = 1; i <= n; i++){ // loop for the upper half of the diamond star number pattern
+            System.out.print("*");
+
+            for(int j = 1; j <= i; j++){ // increasing numbers
+                System.out.print(j);
+            }
+
+            for(int j = i - 1; j >=1 ; j-- ){ // decreasing numbers
+                System.out.print(j);
+            }
+            System.out.println("*");
+
+        }
+
+        for(int i = n - 1; i >= 1; i--){ // loop for the lower half of the pattern
+            System.out.print("*");
+
+            for(int j = 1; j <= i; j++){ // increasing numbers
+                System.out.print(j);
+            }
+
+            for(int j = i - 1; j >= 1; j--){ // decreasing number
+                System.out.print(j);
+            }
+
+            System.out.println("*");
+        }
+        System.out.println("*");// print the last star in the pattern
+
+    }
+}
